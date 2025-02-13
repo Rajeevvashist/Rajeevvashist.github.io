@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poornima College of Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-text {
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        .slider {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 400px; /* Control the maximum height of the images */
+            object-fit: cover; /* Ensure the images are cropped to fit the container */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img class="responsive-image" src="download (5).jpg" alt="Poornima College of Engineering Logo" class="logo">
+            <div class="header-text">
+                <h1>Poornima College of Engineering</h1>
+                <p>Empowering the Next Generation of Engineers</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index2.html"> 🏠Home</a></li>
+                <li><a href="about2.html">About</a></li>
+                <li><a href="contact2.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            <div class="container"><img src="Webbanner.jpg" width="100%"></div>
+            <h1>POORNIMA GROUP AT A GLANCE</h1>
+            <h4>Born with a vision of creating an engineering college, Poornima College & Institute was established about 3 decades ago in the year 2000 in Jaipur (Rajasthan).<br/> With the primary aim to offer excellent professional & technical education to the students, <br/>Poornima College & Institute was created under the flagship of Shanti Education Society (SES) that engraved its existence in the year 1999,<br/> thereby registering itself under the Rajasthan Societies act.</h4>
+            <h1>Welcome to Poornima College of Engineering</h1>
+            <!-- Added Slider -->
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="whatsapp.jpg"width="50%" height="20%"></div>
+                    <div class="slide"><img src="whatsapp4.jpg" width="50%" height="20%"></div>
+                    <div class="slide"><img src="whatsapp3.jpg" width="50%"  height="20%"></div>
+                    <!-- Add more slides as needed -->
+                </div>
+            <div class="container"><img src="OIP (4).jpg" width="70%"></div>
+            <h2>Your Future Starts Here!</h2>
+            
+            <p>At Poornima College of Engineering, we are dedicated to providing a world-class education that prepares students for the challenges of the modern world. Our state-of-the-art facilities, experienced faculty, and vibrant campus life create an environment where students can thrive both academically and personally.</p>
+            <div class="container"><img src="OIP (3).jpg" width="70%"></div>
+            <h1>Why Choose Poornima College of Engineering?</h1>
+            <ul>
+                <li>Top-Ranked Programs: Our engineering programs are recognized for their excellence and innovation.</li>
+                <li>Industry Connections: We have strong ties with leading companies, ensuring our students have access to the best job opportunities.</li>
+                <li>Modern Infrastructure: Our campus boasts modern classrooms, well-equipped laboratories, and extensive library resources.</li>
+                <li>Extracurricular Activities: Engage in a variety of clubs, sports, and cultural events to enhance your college experience.</li>
+                <li>Supportive Community: Our dedicated faculty and staff are committed to helping students succeed.</li>
+            </ul>
+            <div class="container"><img src="OIP (5).jpg" width="70%"></div>
+            <h1>Join Us Today!</h1>
+            <p>Discover the opportunities that await you at Poornima College of Engineering. Apply now and take the first step towards a bright future!</p>
+
+            <h1 class="header-text">OUR Top RECRUITERS</h1>
+            <img class="container" src="Screenshotss.png " width="100%">
+
+            <h1>LIFE AT POORNIMA GROUP</h1>
+            <img src="Screenshotss2.png" width="100%">
+
+            <h1>OUR FACULTY</h1>
+            <li>The faculty members at Poornima College & Institute are dedicated to student learning and are highly accessible which makes student's education experience a unique one.<br/> Let us give you a quick look at our professionally qualified faculty members.<br/> It is a perfect blend of core and visiting members.</li>
+
+            
+            </div>
+               
+        </section>
+    </main>
+    <footer>
+        <p>Contact us at: info@poornima.edu.in</p>
+    </footer>
+    <script>
+    setInterval(nextSlide, 2000); // Change slide every 3 seconds
+
+    let slides = document.querySelector(".slides");
+    let slideIndex = 0;
+
+    function showSlide(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.children.length;
+        showSlide(slideIndex);
+    }
+    </script>
+</body>
+</html>
